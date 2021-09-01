@@ -1,14 +1,7 @@
 [
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    },
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    },
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
+  { "title": "Test Title", "text": "Test text" },
+  { "title": "Test Title", "text": "Test text" },
+  { "title": "Test Title", "text": "Test text" },
+  { "title": "Let dog out", "text": "Let her out!" },
+  { "title": "Let dog out", "text": "Let her out!" }
 ]
