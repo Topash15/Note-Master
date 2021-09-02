@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Use api router
-app.use("/api/db", require("./routes/api/index"));
+app.use("/api/notes", require("./routes/api/index"));
 
 //use html router
 app.use("/", require("./routes/html/index"));

@@ -6,8 +6,7 @@ const db = require("../../db/db.json");
 
 //gets notes list
 router.get("/", (req, res) => {
-  res.json(db);
-  return db;
+  return res.json(db);
 });
 
 //adds note to notes list
