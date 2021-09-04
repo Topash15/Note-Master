@@ -7,6 +7,10 @@
   
   This application allows you to create and store notes. Each note can be selected to view additional details.
   
+  ![image](https://user-images.githubusercontent.com/56897774/132098907-3d07ec9c-f90e-4a8b-bb03-328ea6cafb1d.png)
+  ![image](https://user-images.githubusercontent.com/56897774/132098930-d7e9efb2-16cc-48c3-8a57-2f06f7f8cc37.png)
+
+  
   ## Table of Contents
   
   * [Installation](#installation)
