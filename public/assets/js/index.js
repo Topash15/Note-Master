@@ -7,8 +7,8 @@ let newNoteBtn;
 let noteList;
 
 
-
-if (window.location.pathname === '/notes.html') {
+console.log(window.location.pathname);
+if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
@@ -35,7 +35,12 @@ const getNotes = () =>
     headers: {
       'Content-Type': 'application/json',
     },
-  });
+  })
+  .then( response => {
+    console.log(response);
+    return response
+    });
+
 
 const saveNote = (note) =>
   fetch('/api/notes', {
@@ -85,6 +90,7 @@ const handleNoteSave = () => {
 const handleNoteDelete = (e) => {
   // Prevents the click listener for the list from being called when the button inside of it is clicked
   e.stopPropagation();
+  console.log('delete clicked');
 
   const note = e.target;
   const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
@@ -94,6 +100,7 @@ const handleNoteDelete = (e) => {
   }
 
   deleteNote(noteId).then(() => {
+    console.log(noteId);
     getAndRenderNotes();
     renderActiveNote();
   });

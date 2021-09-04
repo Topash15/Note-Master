@@ -1,14 +1,1 @@
-[
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    },
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    },
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
-]
+[{"title":"test","text":"test","id":"fd987df6-41b0-4543-8399-e2de70c3efca"},{"title":"test","text":"test","id":"cf84e918-a81b-43fe-9498-ade6c0293f46"},{"title":"test","text":"test","id":"eba6f989-9be2-45cc-baf7-6473890c52c8"}]
