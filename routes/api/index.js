@@ -49,23 +49,25 @@ router.post("/", (req, res) => {
 router.delete("/:id", (req, res) => {
   //filters notes list and returns all that do not match id
   const remainingNotes = notes.filter(note => note.id.toString() !== req.params.id);
-  // console.log("here's what remains")
-  // console.log(remainingNotes);
-
-  //checks that id matches the note that is trying to be deleted
-  const result = findById(req.params.id, notes);
-  if (result) {
-    // const remainingNotes = notes.filter(note => note.id.toString() !== req.params.id);
-    res.json(notes);
-    return remainingNotes
-  } else {
-    res.status(404);
-  }
+  
+  console.log("here's what remains");
+  console.log(remainingNotes);
 
   //writes new list of notes to db files
   const notesLocation = path.join(__dirname, "../../db/db.json");
   fs.writeFileSync(notesLocation, JSON.stringify(remainingNotes));
   res.send(notes);
+  
+
+  //checks that id matches the note that is trying to be deleted
+  // const result = findById(req.params.id, notes);
+  // if (result) {
+  //   // const remainingNotes = notes.filter(note => note.id.toString() !== req.params.id);
+  //   res.json(notes);
+  //   return remainingNotes
+  // } else {
+  //   res.status(404);
+  // }
 
 })
 
